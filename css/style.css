@@ -13,6 +13,27 @@ html {
 *:after {
     box-sizing: border-box;
 }
+.menu__burger{display: none; width: 36px;     height: 28px; cursor: pointer; position: relative}
+.menu__burger-line{        display: inline-block;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+}
+.menu__burger-line:nth-of-type(2){
+    top: 12px;
+}
+.menu__burger-line:first-child{
+    top: 0;
+}
+.menu__burger-line:last-child{bottom: 0;}
+
+.close .menu__burger-line:first-child{transform: rotate(45deg);top: 14px;}
+.close .menu__burger-line:last-child{transform: rotate(-45deg);top: 14px;}
+.close .menu__burger-line:nth-of-type(2){
+    opacity: 0;
+}
+
 
 .logo__brand {
     font-size: 1.5rem;
@@ -401,3 +422,61 @@ font-family: "Maven Pro";
 .link-t{background: url(../img/twitter.svg);}
 .link-g{background: url(../img/google-plus.svg);}
 .link-i{background: url(../img/instagram.svg);}
+
+@media(max-width:1024px){
+    body{font-size: 12px;}
+    .main-content{height: 76vh;
+    min-height: 400px;}
+    .get-started-btn{margin-left: 30px;width: 120px;padding: 10px 10px;}
+    .table{padding: 8.25rem 2rem;}
+    .price-tag{padding: 50px 5px;}
+    .price-tag__desc{width: 248px;}
+    .contacts{height: 15%;}
+    .copyright{    min-width: 250px;}
+}
+@media(max-width:768px){
+    .table{    padding: 8.25rem 1rem;}
+    .price-tag{min-width: 230px;}
+    .price-tag__title{margin: 20px auto 10px;}
+    .price-tag__desc{width: 190px;    line-height: 23px;}
+  
+    .menu__link{    width: 70px;}
+      .large{    width: 110px;}
+    .get-started-btn{    padding: 10px 0px;
+    width: 100px;
+    margin-left: 1rem;
+    font-size: 0.75rem;}
+    .menu__list{    padding-left: 8px;}
+    .large{width: 120px;}
+    .contacts{height: 20%;}
+}
+@media (max-width:415px){
+    .menu__burger{display: block; }
+    body{font-size: 10px;}
+    .logo{justify-content: start;}
+    .logo img{height: 40px;}
+    .logo__brand{font-size: 1rem;
+    padding-left: 10px;}
+    .menu{position: relative;}
+    .menu__list{flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 180px;}
+    .main__second-header{    font-size: 2.5rem;}
+    .table__title{font-size: 3rem;}
+    .price-tags{flex-direction: column;
+    height: 1600px;}
+    .call-to-action__title{    font-size: 2rem;}
+    .contacts__wrap{    width: 95%;   grid-template-areas:
+        'logo . menu menu'
+        'copy . . social'; position: relative;
+    grid-template-rows: 150px 40px;
+    align-items: start;}
+    .contacts__wrap .logo{    position: relative;}
+    .contacts-menu{position: absolute;
+    top: 0;
+    right: 0;}
+    
+}

@@ -76,14 +76,18 @@ html {
     justify-content: space-between;
     width: 160px;
 }
-
-.menu__link:hover {}
+.light{transition: all 13s linear;}
+.light:hover {   border-bottom: 1px solid #fff;}
 
 .menu__link {
     color: #fff;
     text-decoration: none;
     list-style: none;
+    transition: all .3s linear;
+    width: 96px;
+    text-align: center;
 }
+.large{width: 130px;}
 
 .get-started-btn {
     margin-left: 60px;
@@ -361,6 +365,7 @@ html {
 .menu__link-dark {
     color: #000;
 }
+.menu__link-dark:hover{color: #756edc;}
 
 .contacts__get-started-btn {
     background-color: #6e45e2;
@@ -374,6 +379,7 @@ html {
     grid-area: menu;
 }
 .contacts-menu{width: 100%;}
+.contacts-menu li{    padding-right: 1rem;}
 
 .copyright {
     grid-area: copy;
@@ -381,9 +387,17 @@ html {
 font-family: "Maven Pro";
 }
 
-.social-blocks {
-    grid-area: social;
+.social {
+       grid-area: social;
+    display: flex;
+    justify-content: space-evenly;
+    width: 110px;
 }
-.contacts__wrap{
-    
+.social__link{
+    height: 25px;width: 25px; opacity: .7;transition: all .s linear;
 }
+.social__link:hover{opacity: 1}
+.link-f{background: url(../img/facebook.svg);}
+.link-t{background: url(../img/twitter.svg);}
+.link-g{background: url(../img/google-plus.svg);}
+.link-i{background: url(../img/instagram.svg);}

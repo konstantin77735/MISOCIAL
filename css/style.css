@@ -13,26 +13,64 @@ html {
 *:after {
     box-sizing: border-box;
 }
-.menu__burger{display: none; width: 36px;     height: 28px; cursor: pointer; position: relative}
-.menu__burger-line{        display: inline-block;
+
+.menu__burger {
+    display: none;
+    width: 36px;
+    height: 28px;
+    cursor: pointer;
+    position: relative
+}
+
+.menu__burger-line {
+    transition: all .5s linear;
+    display: inline-block;
     height: 3px;
     width: 100%;
     background: #fff;
     position: absolute;
 }
-.menu__burger-line:nth-of-type(2){
-    top: 12px;
-}
-.menu__burger-line:first-child{
-    top: 0;
-}
-.menu__burger-line:last-child{bottom: 0;}
 
-.close .menu__burger-line:first-child{transform: rotate(45deg);top: 14px;}
-.close .menu__burger-line:last-child{transform: rotate(-45deg);top: 14px;}
-.close .menu__burger-line:nth-of-type(2){
+.close .menu__burger-line:first-child {
+    transform: rotate(45deg);
+    top: 14px;
+}
+
+.close .menu__burger-line:last-child {
+    transform: rotate(-45deg);
+    top: 14px;
+}
+
+.close .menu__burger-line:nth-of-type(2) {
     opacity: 0;
 }
+
+.menu__burger-footer .menu__burger-line {
+    background: #000;
+}
+
+.menu__footer .menu__link a {
+    color: #000;
+}
+
+
+.menu__link a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu__burger-line:nth-of-type(2) {
+    top: 12px;
+}
+
+.menu__burger-line:first-child {
+    top: 0;
+}
+
+.menu__burger-line:last-child {
+    bottom: 0;
+}
+
 
 
 .logo__brand {
@@ -97,8 +135,14 @@ html {
     justify-content: space-between;
     width: 160px;
 }
-.light{transition: all 13s linear;}
-.light:hover {   border-bottom: 1px solid #fff;}
+
+.light {
+    transition: all 13s linear;
+}
+
+.light:hover {
+    border-bottom: 1px solid #fff;
+}
 
 .menu__link {
     color: #fff;
@@ -108,7 +152,10 @@ html {
     width: 96px;
     text-align: center;
 }
-.large{width: 130px;}
+
+.large {
+    width: 130px;
+}
 
 .get-started-btn {
     margin-left: 60px;
@@ -370,7 +417,7 @@ html {
 }
 
 .contacts__wrap {
-      height: 65%;
+    height: 65%;
     min-height: 100px;
     display: grid;
     width: 90%;
@@ -386,7 +433,10 @@ html {
 .menu__link-dark {
     color: #000;
 }
-.menu__link-dark:hover{color: #756edc;}
+
+.menu__link-dark:hover {
+    color: #756edc;
+}
 
 .contacts__get-started-btn {
     background-color: #6e45e2;
@@ -399,84 +449,238 @@ html {
 .menu {
     grid-area: menu;
 }
-.contacts-menu{width: 100%;}
-.contacts-menu li{    padding-right: 1rem;}
+
+.contacts-menu {
+    width: 100%;
+}
+
+.contacts-menu li {
+    padding-right: 1rem;
+}
 
 .copyright {
     grid-area: copy;
     color: #6a6a77;
-font-family: "Maven Pro";
+    font-family: "Maven Pro";
 }
 
 .social {
-       grid-area: social;
+    grid-area: social;
     display: flex;
     justify-content: space-evenly;
     width: 110px;
 }
-.social__link{
-    height: 25px;width: 25px; opacity: .7;transition: all .s linear;
-}
-.social__link:hover{opacity: 1}
-.link-f{background: url(../img/facebook.svg);}
-.link-t{background: url(../img/twitter.svg);}
-.link-g{background: url(../img/google-plus.svg);}
-.link-i{background: url(../img/instagram.svg);}
 
-@media(max-width:1024px){
-    body{font-size: 12px;}
-    .main-content{height: 76vh;
-    min-height: 400px;}
-    .get-started-btn{margin-left: 30px;width: 120px;padding: 10px 10px;}
-    .table{padding: 8.25rem 2rem;}
-    .price-tag{padding: 50px 5px;}
-    .price-tag__desc{width: 248px;}
-    .contacts{height: 15%;}
-    .copyright{    min-width: 250px;}
+.social__link {
+    height: 25px;
+    width: 25px;
+    opacity: .7;
+    transition: all .s linear;
 }
-@media(max-width:768px){
-    .table{    padding: 8.25rem 1rem;}
-    .price-tag{min-width: 230px;}
-    .price-tag__title{margin: 20px auto 10px;}
-    .price-tag__desc{width: 190px;    line-height: 23px;}
-  
-    .menu__link{    width: 70px;}
-      .large{    width: 110px;}
-    .get-started-btn{    padding: 10px 0px;
-    width: 100px;
-    margin-left: 1rem;
-    font-size: 0.75rem;}
-    .menu__list{    padding-left: 8px;}
-    .large{width: 120px;}
-    .contacts{height: 20%;}
+
+.social__link:hover {
+    opacity: 1
 }
-@media (max-width:415px){
-    .menu__burger{display: block; }
-    body{font-size: 10px;}
-    .logo{justify-content: start;}
-    .logo img{height: 40px;}
-    .logo__brand{font-size: 1rem;
-    padding-left: 10px;}
-    .menu{position: relative;}
-    .menu__list{flex-direction: column;
-    justify-content: space-evenly;
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-height: 180px;}
-    .main__second-header{    font-size: 2.5rem;}
-    .table__title{font-size: 3rem;}
-    .price-tags{flex-direction: column;
-    height: 1600px;}
-    .call-to-action__title{    font-size: 2rem;}
-    .contacts__wrap{    width: 95%;   grid-template-areas:
-        'logo . menu menu'
-        'copy . . social'; position: relative;
-    grid-template-rows: 150px 40px;
-    align-items: start;}
-    .contacts__wrap .logo{    position: relative;}
-    .contacts-menu{position: absolute;
-    top: 0;
-    right: 0;}
-    
+
+.link-f {
+    background: url(../img/facebook.svg);
+}
+
+.link-t {
+    background: url(../img/twitter.svg);
+}
+
+.link-g {
+    background: url(../img/google-plus.svg);
+}
+
+.link-i {
+    background: url(../img/instagram.svg);
+}
+
+@media(max-width:1024px) {
+    body {
+        font-size: 12px;
+    }
+
+    .main-content {
+        height: 76vh;
+        min-height: 400px;
+    }
+
+    .get-started-btn {
+        margin-left: 30px;
+        width: 120px;
+        padding: 10px 10px;
+    }
+
+    .table {
+        padding: 8.25rem 2rem;
+    }
+
+    .price-tag {
+        padding: 50px 5px;
+    }
+
+    .price-tag__desc {
+        width: 248px;
+    }
+
+    .contacts {
+        height: 15%;
+    }
+
+    .copyright {
+        min-width: 250px;
+    }
+}
+
+@media(max-width:768px) {
+    .table {
+        padding: 8.25rem 1rem;
+    }
+
+    .price-tag {
+        min-width: 230px;
+    }
+
+    .price-tag__title {
+        margin: 20px auto 10px;
+    }
+
+    .price-tag__desc {
+        width: 190px;
+        line-height: 23px;
+    }
+
+    .menu__link {
+        width: 70px;
+    }
+
+    .large {
+        width: 110px;
+    }
+
+    .get-started-btn {
+        padding: 10px 0px;
+        width: 100px;
+        margin-left: 1rem;
+        font-size: 0.75rem;
+    }
+
+    .menu__list {
+        padding-left: 8px;
+    }
+
+    .large {
+        width: 120px;
+    }
+
+    .contacts {
+        height: 20%;
+    }
+}
+
+@media (max-width:415px) {
+    .menu__burger {
+        display: block;
+    }
+
+    .menu__link {
+        display: none;
+        opacity: 0;
+        width: 70px;
+        margin-top: 8px;
+    }
+
+    body {
+        font-size: 10px;
+    }
+
+    .logo {
+        justify-content: start;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .logo__brand {
+        font-size: 1rem;
+        padding-left: 10px;
+    }
+
+    .menu {
+        position: relative;
+    }
+
+    .menu__list {
+        width: 128px;
+        position: absolute;
+        top: 15px;
+        flex-direction: column;
+        justify-content: flex-start;
+        right: -7px;
+        min-height: 180px;
+    }
+
+    .main__text {
+        padding-top: 50px;
+    }
+
+    .main__second-header {
+        font-size: 2.5rem;
+    }
+
+    .table__title {
+        font-size: 3rem;
+    }
+
+    .price-tags {
+        flex-direction: column;
+        height: 1600px;
+    }
+
+    .call-to-action__title {
+        font-size: 2rem;
+    }
+
+    .contacts__wrap {
+        width: 95%;
+        grid-template-areas:
+            'logo . menu menu'
+            'copy . . social';
+        position: relative;
+        grid-template-rows: 200px 40px;
+        align-items: start;
+    }
+
+    .contacts__wrap .logo {
+        position: relative;
+    }
+
+    .contacts-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .get-started-btn {
+        margin-left: 0;
+        padding: 7px 3px;
+        height: 30px;
+        width: 66px;
+        font-size: .65rem;
+    }
+    .contacts__wrap .get-started-btn{ border: 1px solid #000;}
+    .menu__footer{margin: 0;}
+    .contacts__wrap .logo{margin-left: 10px;}
+    .contacts__wrap .menu{    width: 100%;}
+
+}
+@media (max-width: 360px){
+    .contacts .menu__footer{right: 8px;}
+    .main-content__nav .menu{    right: -8px;}
+    .contacts .social{   position: absolute;right: 0px;}
+    .table__desc{    width: 24rem;}
 }

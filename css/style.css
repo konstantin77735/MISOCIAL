@@ -116,9 +116,9 @@ html {
 }
 
 .menu {
-    width: 58%;
+    
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
 }
 
@@ -448,11 +448,16 @@ html {
 
 .menu {
     grid-area: menu;
+        justify-content: flex-end;
 }
 
 .contacts-menu {
     width: 100%;
 }
+.menu__footer{    width: 650px;}
+.menu__footer .get-started-btn{border: 1px solid #000;
+    padding: 10px 10px;}
+
 
 .contacts-menu li {
     padding-right: 1rem;
@@ -672,7 +677,8 @@ html {
         width: 66px;
         font-size: .65rem;
     }
-    .contacts__wrap .get-started-btn{ border: 1px solid #000;}
+    .contacts__wrap .get-started-btn{width: 70px;
+    padding: 9px 0;}
     .menu__footer{margin: 0;}
     .contacts__wrap .logo{margin-left: 10px;}
     .contacts__wrap .menu{    width: 100%;}
@@ -683,4 +689,15 @@ html {
     .main-content__nav .menu{    right: -8px;}
     .contacts .social{   position: absolute;right: 0px;}
     .table__desc{    width: 24rem;}
+}
+
+@media (max-width:320px){
+    .table__subtitle{font-size: 1rem;}
+    .table__title{font-size: 2.4rem;}
+    .table__desc{width: 21rem;
+    font-size: 1rem;}
+    .call-to-action__title{font-size: 1.7rem;}
+    .call-to-action__btn{width: 10rem;}
+    .social{width: 100px;}
+    
 }
